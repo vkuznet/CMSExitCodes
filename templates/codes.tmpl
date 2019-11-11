@@ -1,0 +1,7 @@
+<!-- codes.tmpl -->
+<h3>{{.Name}}</h3>
+{{range $k, $v := .ExitCodes}}
+<b>{{$k}}</b>: {{ $v }}
+<br/>
+{{end}}
+<!-- end of codes.tmpl -->

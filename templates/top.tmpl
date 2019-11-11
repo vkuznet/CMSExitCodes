@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!-- web_top.tmpl -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head profile="http://www.w3.org/2005/11/profile">
+    <title>CMS Exit Codes</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta name="author" content="Valentin Kuznetsov (vkuznet at gmail dot com)" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta name="ROBOTS" content="ALL" />
+    <meta name="Copyright" content="(CC) 2019, CMS Exit codes" />
+    <meta name="Rating" content="General" />
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <!-- Kube CSS -->
+    <link rel="stylesheet" href="/css/kube.min.css">
+
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch" title="CMS Exit Codes" />
+
+</head>
+<body class="yui-skin-sam">
+
+<div id="banner" class="is-navbar-container">
+    <div class="is-brand">
+        <b class="is-logo">CMS Exit Codes</b>
+    </div>
+    <div class="is-navbar">
+        <!-- primary navigation -->
+        <nav>
+            <ul>
+                <li><a id="web_top_home" href="/">Home</a></li>
+                <li><a id="web_top_status" href="/status">Status</a></li>
+                <li><a id="web_top_faq" href="/faq">FAQ</a></li>
+                <li><a id="web_top_bug" href="https://github.com/vkuznet/CMSExitCodes/issues">Bug report</a></li>
+            </ul>
+        </nav>
+        <!-- secondary navigation -->
+        <nav class="is-push-right">
+            <ul>
+                <!-- auth-session is defined in code -->
+                <!-- once logout redirect to home page -->
+                <li><a href="javascript:deleteCookie('auth-session');load('/');">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<!-- end of web_top.tmpl -->

@@ -1,0 +1,4 @@
+60317: ASO Transfer canceled due to timeout
+60321: Storage element is not accessible
+60322: Permission denied
+60323: User quota exceeded
