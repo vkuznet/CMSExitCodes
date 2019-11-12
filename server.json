@@ -1,9 +1,9 @@
 {
-    "exitCodes": "/Users/vk/tmp/CMSExitCodes/codes",
+    "exitCodes": "ROOT/codes",
     "port": 8212,
-    "templates": "/Users/vk/tmp/CMSExitCodes/templates",
-    "jscripts": "/Users/vk/tmp/CMSExitCodes/js",
-    "styles": "/Users/vk/tmp/CMSExitCodes/css",
-    "images": "/Users/vk/tmp/CMSExitCodes/images",
+    "templates": "ROOT/templates",
+    "jscripts": "ROOT/js",
+    "styles": "ROOT/css",
+    "images": "ROOT/images",
     "verbose": 0
 }
