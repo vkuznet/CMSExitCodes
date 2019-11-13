@@ -11,7 +11,6 @@ import (
 	"net/http"
 	"os"
 	"runtime"
-	"strconv"
 	"strings"
 	"sync/atomic"
 	"time"
@@ -92,13 +91,28 @@ func DataHandler(w http.ResponseWriter, r *http.Request) {
 	name := r.FormValue("name")
 	codes, _ := exitCodes(name)
 	arr := strings.Split(r.URL.Path, "/")
-	key, err := strconv.Atoi(arr[len(arr)-1])
-	if err == nil {
-		if v, ok := codes[key]; ok {
-			c := make(map[int]string)
-			c[key] = v
-			codes = c
+	key := arr[len(arr)-1]
+	if len(arr) > 1 {
+		cfinal := make(map[string]interface{})
+		for k, val := range codes {
+			switch vvv := val.(type) {
+			case map[string]interface{}:
+				if key != "" {
+					if v, ok := vvv[key]; ok {
+						c := make(map[string]string)
+						c[key] = v.(string)
+						cfinal[k] = c
+					}
+				} else {
+					cfinal[k] = val
+				}
+			case string:
+				if k == key {
+					cfinal[k] = val
+				}
+			}
 		}
+		codes = cfinal
 	}
 	// return json representation of the data
 	if strings.Contains(accept, "json") || strings.Contains(content, "json") {

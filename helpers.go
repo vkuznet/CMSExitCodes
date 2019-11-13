@@ -5,7 +5,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -15,8 +14,8 @@ import (
 //
 
 // helper function to read exit codes file
-func exitCodesReader(fname string) (map[int]string, error) {
-	codes := make(map[int]string)
+func exitCodesReader(fname string) (map[string]interface{}, error) {
+	codes := make(map[string]interface{})
 	// read exit code file
 	fin := fmt.Sprintf("%s/%s", Config.ExitCodes, fname)
 	data, err := ioutil.ReadFile(fin)
@@ -28,15 +27,14 @@ func exitCodesReader(fname string) (map[int]string, error) {
 			continue
 		}
 		arr := strings.Split(line, ":")
-		code, _ := strconv.Atoi(arr[0])
-		codes[code] = strings.Trim(arr[1], " ")
+		codes[strings.Trim(arr[0], " ")] = strings.Trim(arr[1], " ")
 	}
 	return codes, nil
 }
 
 // helper function to read exit codes file
-func exitCodes(fname string) (map[int]string, error) {
-	codes := make(map[int]string)
+func exitCodes(fname string) (map[string]interface{}, error) {
+	codes := make(map[string]interface{})
 	// read exit code file
 	if fname == "" || strings.ToLower(fname) == "all" {
 		file, err := os.Open(Config.ExitCodes)
@@ -50,9 +48,8 @@ func exitCodes(fname string) (map[int]string, error) {
 			if e != nil {
 				return codes, e
 			}
-			for k, v := range c {
-				codes[k] = v
-			}
+			system := strings.Split(name, ".txt")[0]
+			codes[system] = c
 		}
 		return codes, nil
 	}
