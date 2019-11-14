@@ -1,6 +1,6 @@
 {
     "exitCodes": "ROOT/codes",
-    "port": 8212,
+    "port": 9201,
     "templates": "ROOT/templates",
     "jscripts": "ROOT/js",
     "styles": "ROOT/css",
