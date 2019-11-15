@@ -15,7 +15,9 @@ import (
 // Configuration stores server configuration parameters
 type Configuration struct {
 	Port         int    `json:"port"`         // server port number
-	ExitCodes    string `json:"exitCodes"`    // server FilesDB URI
+	ExitCodes    string `json:"exitCodes"`    // location of exit codes
+	ExitCodesUrl string `json:"exitCodesUrl"` // URL location of exit codes
+	CacheExpire  int64  `json:"cacheExpire"`  // cache expiration in sec
 	Templates    string `json:"templates"`    // location of server templates
 	Jscripts     string `json:"jscripts"`     // location of server JavaScript files
 	Images       string `json:"images"`       // location of server images

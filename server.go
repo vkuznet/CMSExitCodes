@@ -22,6 +22,7 @@ import (
 
 // global variables
 var _top, _bottom, _search string
+var _cache map[string]Cache
 
 // Time0 represents initial time when we started the server
 var Time0 time.Time
@@ -44,6 +45,9 @@ func Server(configFile string) {
 		logs.WithFields(logs.Fields{"Time": time.Now(), "Config": configFile}).Error("Unable to parse")
 	}
 	fmt.Println("Configuration:", Config.String())
+
+	// initialize cache variable
+	_cache = make(map[string]Cache)
 
 	var templates ServerTemplates
 	tmplData := make(map[string]interface{})
