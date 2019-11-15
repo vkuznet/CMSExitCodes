@@ -1,5 +1,7 @@
 {
     "exitCodes": "ROOT/codes",
+    "exitCodesUrl": "https://raw.githubusercontent.com/vkuznet/CMSExitCodes/master/codes",
+    "cacheExpire": 600,
     "port": 9201,
     "templates": "ROOT/templates",
     "jscripts": "ROOT/js",
