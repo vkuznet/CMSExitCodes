@@ -53,6 +53,7 @@ func Server(configFile string) {
 	tmplData := make(map[string]interface{})
 	tmplData["Time"] = time.Now()
 	tmplData["Version"] = info()
+	tmplData["Base"] = Config.Base
 	_top = templates.Top(Config.Templates, tmplData)
 	_bottom = templates.Bottom(Config.Templates, tmplData)
 

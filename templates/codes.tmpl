@@ -1,7 +1,12 @@
 <!-- codes.tmpl -->
 <h3>{{.Name}}</h3>
 {{range $k, $v := .ExitCodes}}
-<b>{{$k}}</b>: {{ $v }}
+<b>{{$k}}</b>:
+<ul>
+{{range $code, $desc := $v }}
+<li>{{ $code }}: {{ $desc }} </li>
+{{end}}
+</ul>
 <br/>
 {{end}}
 <!-- end of codes.tmpl -->

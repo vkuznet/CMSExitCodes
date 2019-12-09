@@ -14,9 +14,9 @@
     <meta name="Copyright" content="(CC) 2019, CMS Exit codes" />
     <meta name="Rating" content="General" />
 
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="{{.Base}}/css/main.css"/>
     <!-- Kube CSS -->
-    <link rel="stylesheet" href="/css/kube.min.css">
+    <link rel="stylesheet" href="{{.Base}}/css/kube.min.css">
 
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch" title="CMS Exit Codes" />
 
@@ -31,9 +31,9 @@
         <!-- primary navigation -->
         <nav>
             <ul>
-                <li><a id="web_top_home" href="/">Home</a></li>
-                <li><a id="web_top_status" href="/status">Status</a></li>
-                <li><a id="web_top_faq" href="/faq">FAQ</a></li>
+                <li><a id="web_top_home" href="{{.Base}}">Home</a></li>
+                <li><a id="web_top_status" href="{{.Base}}/status">Status</a></li>
+                <li><a id="web_top_faq" href="{{.Base}}/faq">FAQ</a></li>
                 <li><a id="web_top_bug" href="https://github.com/vkuznet/CMSExitCodes/issues">Bug report</a></li>
             </ul>
         </nav>

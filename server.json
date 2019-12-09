@@ -1,4 +1,5 @@
 {
+    "base": "/exitcodes",
     "exitCodes": "ROOT/codes",
     "exitCodesUrl": "https://raw.githubusercontent.com/vkuznet/CMSExitCodes/master/codes",
     "cacheExpire": 600,

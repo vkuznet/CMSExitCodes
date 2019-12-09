@@ -15,6 +15,7 @@ import (
 // Configuration stores server configuration parameters
 type Configuration struct {
 	Port         int    `json:"port"`         // server port number
+	Base         string `json:"base"`         // base for URL paths
 	ExitCodes    string `json:"exitCodes"`    // location of exit codes
 	ExitCodesUrl string `json:"exitCodesUrl"` // URL location of exit codes
 	CacheExpire  int64  `json:"cacheExpire"`  // cache expiration in sec
