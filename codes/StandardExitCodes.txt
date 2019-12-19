@@ -1,0 +1,40 @@
+-1: Error return without specification
+1: Hangup (POSIX)
+2: Interrupt (ANSI)
+4: Illegal instruction (ANSI)
+5: Trace trap (POSIX)
+6: Abort (ANSI) or IOT trap (4.2BSD)
+7: BUS error (4.2BSD)
+8: Floating point exception (ANSI)
+9: killed, unblockable (POSIX) kill:9
+11: segmentation violation (ANSI) (most likely user application crashed)
+15: Termination (ANSI)
+24: Soft CPU limit exceeded (4.2 BSD)
+25: File size limit exceeded (4.2 BSD)
+30: Power failure restart (System V.)
+50: Required application version not found at the site.
+64: I/O error: cannot open data file (SEAL)
+65: End of job from user application (CMSSW)
+66: Application exception
+73: Failed writing to read-only file system
+81: Job did not find functioning CMSSW on worker node.
+84: Some required file not found; check logs for name of missing file.
+85: Job failed to open local and fallback files.
+90: Application exception
+92: Job failed to open local and fallback files.
+126: Permission problem or command is not an executable
+127: Command not found
+129: Hangup (POSIX)
+132: Illegal instruction (ANSI)
+133: Trace trap (POSIX)
+134: Abort (ANSI) or IOT trap (4.2 BSD) (most likely user application crashed)
+135: Bus error (4.2 BSD)
+136: Floating point exception (e.g. divide by zero)
+137: SIGKILL; likely an unrelated batch system kill.
+139: Segmentation violation (ANSI)
+143: Termination (ANSI)(or incorporate in the msg text)
+147: Error during attempted file stageout.
+151: Error during attempted file stageout.
+152: CPU limit exceeded (4.2 BSD)
+153: File size limit exceeded (4.2 BSD)
+155: Profiling alarm clock (4.2 BSD)

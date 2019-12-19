@@ -1,0 +1,4 @@
+60321: if (.*reports could not open connection to.*) Storage element is not accessible.; if (.*451 operation failed\: all pools are full.*) Destination site does not have enough space on their storage.; if (.*system error in connect\: connection refused.*) Destination site storage refused connection.
+60322: if (.*permission denied.*) Permission denied.; if (.*operation not permitted.*) Operation not allowed.; if (.*mkdir\(\) fail.*) Can`t create directory.; if (.*open/create error.*) Can`t create directory/file on destination site.; if (.*mkdir\: cannot create directory.*) Can`t create directory.; if (.*530-login incorrect.*) Permission denied to write to destination site.
+60323: if (.*does not have enough space.*) User quota exceeded.; if (.*disk quota exceeded.*) Disk quota exceeded.
+60317: if (.*Cancelled ASO transfer after timeout.*) ASO Transfer canceled due to timeout.

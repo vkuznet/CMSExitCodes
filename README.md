@@ -49,3 +49,9 @@ where `server.json` has the following form:
     "verbose": 0
 }
 ```
+
+### Exit Codes
+The CMS exit codes are located in different areas:
+- [WMCore codes](https://github.com/dmwm/WMCore/blob/master/src/python/WMCore/WMExceptions.py)
+- [P&R codes](https://docs.google.com/spreadsheets/d/1onZky6rW2z7NRvvQaLrBGaS8iFfYSg_EL71F1l3mTWE/edit#gid=0)
+- [CMS JobExit codes](https://twiki.cern.ch/twiki/bin/view/CMSPublic/JobExitCodes)
