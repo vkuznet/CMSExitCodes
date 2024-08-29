@@ -8,6 +8,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"os"
 	"runtime"
@@ -89,7 +90,14 @@ func DataHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	user, _ := username(r)
 	name := r.FormValue("name")
-	codes, _ := exitCodes(name)
+	codes, err := exitCodes(name)
+	if err != nil {
+		w.Write([]byte(fmt.Sprintf("unable to get exit codes, error=%v", err)))
+		return
+	}
+	if Config.Verbose > 0 {
+		log.Println("user", user, "name", name, "found", len(codes), "codes files")
+	}
 	arr := strings.Split(r.URL.Path, "/")
 	key := arr[len(arr)-1]
 	if len(arr) > 1 {
